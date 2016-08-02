@@ -1,0 +1,327 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@font-face{
+    font-family: 'PTSans-Local';
+    src: url("/../local-fonts/PT-Sans/PTS55F.ttf");
+}
+
+@font-face{
+    font-family: 'OswaldRegular-Local';
+    src: url("/../local-fonts/Oswald/Oswald-Regular.ttf");
+}
+
+@font-face{
+    font-family: 'OswaldLight-Local';
+    src: url("/../local-fonts/Oswald/Oswald-Light.ttf");
+}
+
+@font-face{
+    font-family: 'OswaldMedium-Local';
+    src: url("/../local-fonts/Oswald/Oswald-Medium.ttf");
+}
+
+$mainColor: #00C6E8;
+$mainFont: "OswaldRegular-Local";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #282828;
+    color: #595959;
+    font-family: Tahoma;
+    font-size: 14px;
+}
+
+.body-wrapper{
+    max-width: 1580px;
+    margin: 0 auto;
+    background: url("/../img/body-background.png");
+    min-height: 955px;
+
+    .top-line{
+        height: 4px;
+        background: #7F7F7F;
+    }
+
+    .main-wrapper{
+        max-width: 1280px;
+        min-width: 1050px;
+        padding: 0 10px 0 10px;
+        margin: 0 auto;
+        *border: 1px solid #ccc;
+
+        .header{
+            font-family: $mainFont;
+            margin-bottom: 30px;
+
+            .main-logo{
+                float: left;
+                margin-top: 25px;
+
+                h2{
+                    font-size: 22px;
+                    float: right;
+                    margin: 28px 0 0 10px;
+                    line-height: 1.2em;
+                }
+            }
+
+            .search{
+                height: 32px;
+                width: 200px;
+                margin-top: 51px;
+                float: right;
+
+                input[type=text]{
+                    height: inherit;
+                    width: 158px;
+                    border: 1px solid #F2F2F2;
+                    font-family: Tahoma;
+                    float: left;
+                    color: #C4C4C4;
+                    text-indent: 10px;
+                }
+
+                input[type=text]:focus{
+                    outline: none;
+                }
+            }
+
+            .clear{
+                clear: both;
+            }
+
+            .header-nav{
+                height: 40px;
+                border: 1px solid #D3D3D3;
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: space-between;
+                margin-top: 20px;
+                font-size: 14px;
+                font-weight: lighter;
+                color: #595959;
+                background: #F3F3F3;
+
+                li{
+                    text-align: center;
+                    float: left;
+                    line-height: 40px;
+                    width: 100%;
+                    cursor: pointer;
+                    transition: all .3s;
+                    border-right: 1px solid #D3D3D3;
+
+                    &:hover{
+                        background: #00C6E7;
+                        color: white;
+                    }
+
+                    &:last-child{
+                        border-right: none;
+                        clear: both;
+                    }
+
+                    a{
+                        text-decoration: none;
+                        display: block;
+                        color: #8F8F8F;
+                        transition: all .3s;
+                        &:hover{
+                            color: white;
+                        }
+                    }
+                }
+            }
+
+            .aboutus{
+                height: 40px;
+                background: url("/../img/aboutus.png");
+                margin-top: 28px;
+
+                .mainTitle{
+                    font-size: 40px;
+                    color: #7F7F7F;
+                    padding: 0 22px 0 10px;
+                    background: url("/../img/body-background.png");
+                    margin-left: 20px;
+                    float: left;
+                }
+
+                .rightTitle{
+                    float: right;
+                    font-size: 40px;
+                    color: #7F7F7F;
+                    padding: 0 12px 0 10px;
+                    margin-right: 20px;
+                    background: url("/../img/body-background.png");
+                }
+            }
+        }
+
+        .main-container{
+            *border: 1px solid #ccc;
+        }
+
+        .leftbar{
+            width: 19%;
+            height: 400px;
+            font-family: "OswaldLight-Local";
+            font-size: 15px;
+            float: left;
+
+            .leftbar-nav{
+                li{
+                    height: 40px;
+                    line-height: 40px;
+                    border: 1px solid #ccc;
+                    background: #F3F3F3;
+                    color: #595959;
+                    cursor: pointer;
+                    transition: all .3s;
+                    border-bottom: none;
+
+                    &:last-child{
+                        border-bottom: 1px solid #ccc;
+                    }
+
+                    &:hover{
+                        color: $mainColor;
+                        background: #E0E0E0;
+                    }
+
+                    &::before{
+                        content: ' ';
+                        display: block;
+                        float: left;
+                        width: 8px;
+                        height: 8px;
+                        background: #8f8f8f;
+                        margin: 16px 10px 0 10px;
+                        transition: all .3s;
+                    }
+
+                    &:hover::before{
+                        background: $mainColor;
+                    }
+
+                    a {
+                        text-decoration: none;
+                        color: #595959;
+                        display: block;
+                        transition: all .3s;
+
+                        &:hover{
+                            color: $mainColor;
+                        }
+                    }
+                }
+            }
+        }
+
+        .container{
+            width: 78.66%;
+            float: right;
+            margin-left: 2.34%;
+            color: #595959;
+
+            .marks{
+                font-family: Tahoma;
+                font-size: 14px;
+                border-collapse: collapse;
+                min-width: 300px;
+                td, th{
+                    border: 1px solid #ccc;
+                    padding: 4px;
+                    text-align: center;
+                }
+
+                th{
+                    font-weight: bold;
+                }
+            }
+
+            form.students{
+                .optional, .required{
+                    margin-bottom: 10px;
+                }
+                input[name='student_name']{
+                    margin-bottom: 10px;
+                }
+                input[name='editStudent'],
+                input[name='addStudent']{
+                    margin-top: -10px;
+                }
+            }
+
+            .table-students{
+                td, th{
+                    text-align: center;
+                    vertical-align: middle;
+                }
+                th{
+                    font-weight: bold;
+                }
+            }
+
+            #hidden-form{
+                display: none;
+                transition: display .5s;
+            }
+
+            .fieldset-form{
+                font-family: 'PTSans-Local';
+                width: 30%;
+                float: left;
+                margin: 0 3% 10px 0;
+            }
+
+            .add-marks{
+                .select-for-marks{
+                    width: 49%;
+                    display: inline-block;
+                    margin-bottom: 10px;
+                    margin-right: 1%;
+                }
+
+                .mark{
+                    width: 100px;
+                    display: inline;
+                }
+
+                p{
+                    font-size: 14px;
+                    font-weight: bold;
+                    font-family: 'PTSans-Local';
+                    margin-bottom: 7px;
+
+                    &:first-child{
+                        margin-bottom: 0;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+.clear{
+    clear: both;
+}
+
+.errorText{
+    margin-bottom: 10px;
+
+    &:last-child{
+        margin-bottom: 0;
+    }
+
+    font-weight: bold;
+}
